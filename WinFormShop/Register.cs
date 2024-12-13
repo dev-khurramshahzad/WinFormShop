@@ -66,6 +66,7 @@ namespace WinFormShop
                 con.Close();
 
                 MessageBox.Show("Data Entered", "Success");
+                //Helkkloi
             }
             catch (Exception ex)
             {
