@@ -23,7 +23,7 @@ namespace WinFormShop
             //}
             
             
-            Application.Run(new Register());
+            Application.Run(new AdmCategoryMgmt());
         }
     }
 }
