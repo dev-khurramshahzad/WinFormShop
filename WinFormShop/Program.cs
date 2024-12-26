@@ -21,9 +21,9 @@ namespace WinFormShop
             //{
             //    splashScreen.ShowDialog();
             //}
-            
-            
-            Application.Run(new AdmCategoryMgmt());
+
+
+            Application.Run(new AdmProductsMgmt());
         }
     }
 }

@@ -15,6 +15,9 @@ namespace WinFormShop
 
     public partial class Register : Form
     {
+
+        public SqlConnection con = new SqlConnection("Data Source=.;Initial Catalog=db_ShoppingStore;Integrated Security=True;");
+
         public Register()
         {
             InitializeComponent();
@@ -59,8 +62,7 @@ namespace WinFormShop
 
                 //Data Insertion into Database
 
-                SqlConnection con = new SqlConnection("Data Source=KHURRAM-MACBOOK;Initial Catalog=db_WinFormShop;Integrated Security=True;");
-                SqlCommand cmd = new SqlCommand("INSERT INTO Users VALUES('" + txtName.Text + "','" + txtEmail.Text + "','"+txtPhone.Text+"','"+txtPassword.Text+"','"+txtAddress.Text+"')", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO Customers(FullName,Email,Phone,Password,Address) VALUES('" + txtName.Text + "','" + txtEmail.Text + "','"+txtPhone.Text+"','"+txtPassword.Text+"','"+txtAddress.Text+"')", con);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 con.Close();
